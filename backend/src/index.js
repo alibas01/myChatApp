@@ -1,5 +1,5 @@
 const PORT = process.env.PORT || 8001;
-const app = require("./application");
+const app = require("./application")(ENV, { updateChat });
 const server = require("http").Server(app);
 const WebSocket = require("ws");
 const wss = new WebSocket.Server({ server });
